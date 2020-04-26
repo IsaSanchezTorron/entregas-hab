@@ -18,3 +18,23 @@ node todo.js--clean //Borraria las tareas ya hechas
 //PARA NOTA:
 //La aplicación debería leer un archivo .env que tuviera una variable de entorno LANG=es/gl
 //en base a esa variable mostrar los textos de la aplicación
+
+function addTodo({ text, priority }) {}
+
+function markAsDone({ index }) {}
+
+function markAsUnDone({ index }) {}
+
+function listTodos() {}
+
+function cleanTodos() {}
+
+function saveTodosToFile() {}
+
+module.exports = {
+  addTodo,
+  markAsDone,
+  markAsUnDone,
+  listTodos,
+  cleanTodos,
+};
