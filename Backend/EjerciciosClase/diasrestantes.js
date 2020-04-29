@@ -27,11 +27,8 @@ server.on("request", async function (request, response) {
   } else {
     response.end("Ha habido un error");
   }
+  response.end(JSON.stringify({ message: calcularDias() }));
 });
-
-server.listen(port);
-
-console.log(`El servidor está funcionando en http://localhost:${port}`);
 
 function calcularDías() {
   let fechaHoy = new Date();
@@ -39,6 +36,8 @@ function calcularDías() {
   let tiempoRestante = fechaFinal.getTime() - fechaHoy.getTime();
   let dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
   console.log(`Quedan ${dias} días para que acabe esta movida`);
+  server.listen(port);
+  console.log(`El servidor está funcionando en http://localhost:${port}`);
 }
 
 calcularDías();
