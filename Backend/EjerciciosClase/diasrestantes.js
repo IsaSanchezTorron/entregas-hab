@@ -38,3 +38,5 @@ function calcularDías() {
   let dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
   console.log(`Quedan ${dias} días para que acabe esta movida`);
 }
+
+calcularDías();
