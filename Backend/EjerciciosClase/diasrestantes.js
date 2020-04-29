@@ -30,7 +30,9 @@ server.on("request", async function (request, response) {
 });
 
 server.listen(port);
-console.log(`El servidor es http://localhost:${port}`);
+
+console.log(`El servidor está funcionando en http://localhost:${port}`);
+
 function calcularDías() {
   let fechaHoy = new Date();
   let fechaFinal = new Date(2020, 06, 30);
