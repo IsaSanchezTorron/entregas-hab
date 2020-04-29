@@ -13,7 +13,7 @@ const port = process.env.PORT;
 const server = http.createServer();
 
 server.on("request", async function (request, response) {
-  const { url, method } = request;
+  const { url, method, headers } = request;
 
   if (method.toUpperCase() === "GET" && url === "/freedom") {
     const data = await fs.readFile(
@@ -25,13 +25,12 @@ server.on("request", async function (request, response) {
     response.setHeader("Content-type", "application/json");
     response.end(data);
   } else {
-    console.error("Ha habido un error");
+    response.end("Ha habido un error");
   }
 });
 
 server.listen(port);
 console.log(`El servidor es http://localhost:${port}`);
-
 function calcularDías() {
   let fechaHoy = new Date();
   let fechaFinal = new Date(2020, 06, 30);
