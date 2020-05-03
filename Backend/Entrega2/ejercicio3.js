@@ -9,8 +9,8 @@ const app = express();
 
 app.listen(process.env.PORT);
 
-app.use(function (req, res) {
-  if (new Date().getHours() > 8 && new Date().getHours() < 12) {
+app.use(function (req, res, next) {
+  if (new Date().getHours() > 6 && new Date().getHours() < 12) {
     res.end("Hola");
   } else {
     res.statusCode = 404;
