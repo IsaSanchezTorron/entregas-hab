@@ -4,15 +4,14 @@
 //#################################################################################################
 
 const fs = require("fs-extra").promises;
-require("dotenv").config();
+//require("dotenv").config();
 const path = require("path");
-process = require("process");
-const argParser = require("minimist");
+//process = require("process");
 console.log("Hola mundo");
 
-async function readFile(archivo) {
+async function readFile(path) {
   try {
-    const contenido = await fs.readFile(path);
+    const content = await fs.readFile(path);
     console.log(content.toString());
   } catch (err) {
     console.error(err);
@@ -20,5 +19,5 @@ async function readFile(archivo) {
 }
 
 //readFile(path.join(__dirname,));
-let arguments = argParser(process.argv.slice(2));
-readFile(path.join(__dirname, arguments));
+//const { nombreDeArchivo } = process.argv;
+readFile(path.join("archivo.txt"));
