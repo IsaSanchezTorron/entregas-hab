@@ -17,7 +17,19 @@ async function readFile(path) {
     console.error(err);
   }
 }
-
 //readFile(path.join(__dirname,));
 //const { nombreDeArchivo } = process.argv;
 readFile(path.join("archivo.txt"));
+
+//readFile();
+
+/*
+function leerArchivo(archivo) {
+  return new Promise(function (resolve, reject) {
+    fs.readFile(archivo, "utf-8", function (err, data) {
+      if (err) reject(err);
+      else resolve(data);
+    });
+  });
+}
+*/
