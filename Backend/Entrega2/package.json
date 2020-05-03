@@ -1,5 +1,5 @@
 {
-  "name": "Entrega-1",
+  "name": "Entrega2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,9 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "date-fns": "^2.12.0",
     "dotenv": "^8.2.0",
-    "fs-extra": "^9.0.0",
-    "minimist": "^1.2.5"
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "node": "^14.0.0",
+    "nodemon": "^2.0.3"
   }
 }
