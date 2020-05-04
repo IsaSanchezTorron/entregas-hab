@@ -17,3 +17,25 @@ app.use(function (req, res) {
     res.end("Finiquito");
   }
 });
+
+
+//########################################################
+
+app.get("/", req,res, next ) => {
+    const now = new Date();
+    const hour = now.getHours();
+
+    if (hour<20) {
+        next(new Error ("Estoy durmiendo"));
+    }
+
+    if (hour < 13){
+        next();
+    }
+
+    res.send ("Hola son las" + hour);
+
+
+};
+
+

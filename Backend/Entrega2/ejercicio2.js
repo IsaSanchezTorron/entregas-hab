@@ -4,21 +4,18 @@
 // ###########################################################################################################
 
 const os = require("os");
+const chalk = require("chalk");
 
 console.log("Memoria total:" + os.totalmem() + " bytes");
 console.log("Memoria libre:" + os.freemem() + " bytes");
 
-porcentajeMemoria = parseInt((os.totalmem() / os.freemem()) * 100);
+porcentajeMemoria = Math.round(os.freemem * 100) / os.totalmem;
 console.log(`Tienes un ${porcentajeMemoria} % de memoria libre `);
 
 //--------------------------------------------
 
 let totalMegas = os.totalmem() / 1000000;
 let libresMegas = os.freemem() / 1000000;
-let porcentaje = parseInt((100 * totalMegas) / libresMegas);
+let porcentaje = (100 * libresMegas) / totalMegas;
 //console.log(totalMegas, libresMegas);
 console.log(`Tienes un ${porcentaje} % de memoria libre `);
-
-// No consigo encontrar la lógica del porcentaje :(
-
-console.log(__dirname);
