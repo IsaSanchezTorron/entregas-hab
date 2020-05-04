@@ -9,7 +9,7 @@ const app = express();
 
 app.listen(process.env.PORT);
 
-app.use(function (req, res, next) {
+app.use(function (req, res) {
   if (new Date().getHours() > 6 && new Date().getHours() < 12) {
     res.end("Hola");
   } else {
