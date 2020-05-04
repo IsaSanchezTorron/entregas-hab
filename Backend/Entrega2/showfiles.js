@@ -7,20 +7,42 @@ const fs = require("fs-extra").promises;
 //require("dotenv").config();
 const path = require("path");
 //process = require("process");
-console.log("Hola mundo");
+//console.log("Hola mundo");
 
-async function readFile(path) {
+console.log(arguments);
+
+async function readFile(filePath) {
+  console.log("procesando fichero", filePath);
+
   try {
-    const content = await fs.readFile(path);
-    console.log(content.toString());
-  } catch (err) {
-    console.error(err);
+    const absolutePath = path.resolve(filePath);
+    const pathInfo = await fs.stat(absolutePath);
+    // const content = await fs.readFile(path);
+    // console.log(content.toString());
+    if (!path.info.isFile()) {
+      throw new Error("La ruta no es un fichero");
+    }
+    if (!pathInfo.size > 10000) {
+      throw new Error("El fichero es demasiado grande");
+    }
+    const pathContent = await fs.readFile(absolutePath);
+    console.log("Los contenidos del fichero son" + pathContent.toString());
+  } catch (error) {
+    console.error(error.message);
   }
 }
+
+async function main() {
+  for (const argument of arguments) {
+    const content = await showFile(argument);
+    if (content) console.log(content);
+  }
+}
+main();
+
+//readFile(path.join(arguments));
 //readFile(path.join(__dirname,));
 //const { nombreDeArchivo } = process.argv;
-readFile(path.join("archivo.txt"));
-
 //readFile();
 
 /*

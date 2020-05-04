@@ -20,3 +20,5 @@ let porcentaje = parseInt((100 * totalMegas) / libresMegas);
 console.log(`Tienes un ${porcentaje} % de memoria libre `);
 
 // No consigo encontrar la lógica del porcentaje :(
+
+console.log(__dirname);
