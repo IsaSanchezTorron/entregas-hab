@@ -18,9 +18,8 @@ app.use(function (req, res) {
   }
 });
 
-
 //########################################################
-
+/*
 app.get("/", req,res, next ) => {
     const now = new Date();
     const hour = now.getHours();
@@ -37,5 +36,4 @@ app.get("/", req,res, next ) => {
 
 
 };
-
-
+*/

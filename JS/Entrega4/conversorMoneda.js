@@ -1,4 +1,4 @@
-const url = 'https://api.exchangerate-api.com/v4/latest/EUR';
+const url = "https://api.exchangerate-api.com/v4/latest/EUR";
 const fetchPromise = fetch(url);
 
 fetchPromise
@@ -12,9 +12,10 @@ fetchPromise
     console.log(`El valor actual del dólar es ${valorDelDolar} euros`);
 
     let valorIntroducidoPorElUsuarioEnEuros = prompt(
-      '¿Introduce la cifra en Euros que quieres convertir a Dólares y a Yenes'
+      "¿Introduce la cifra en Euros que quieres convertir a Dólares y a Yenes"
     );
-    let convertidoADolares = valorIntroducidoPorElUsuarioEnEuros * valorDelDolar;
+    let convertidoADolares =
+      valorIntroducidoPorElUsuarioEnEuros * valorDelDolar;
     let convertidoAYenes = valorDelDolar * valorDelYen;
     alert(
       `${valorIntroducidoPorElUsuarioEnEuros} euros son ${convertidoADolares} dólares que son a su vez ${convertidoAYenes} yenes`

@@ -64,7 +64,6 @@ console.log(cliente2);
 console.log(cliente3);
 */
 
-
 //#################################################################################
 //####################### SEGUNDA APROXIMACIÓN ####################################
 //#################################################################################
@@ -77,8 +76,7 @@ console.log(cliente3);
 //######### un ticket por la consola cuando se lo ordena el usuario. ##############
 //#################################################################################
 
-
-const itemNames = ['Camisa', 'Pantalon', 'Calcetines']; // Array de artículos
+const itemNames = ["Camisa", "Pantalon", "Calcetines"]; // Array de artículos
 const itemPrices = [13, 27, 100]; // Array de precios
 
 class Item {
@@ -97,8 +95,6 @@ class Item {
 }
 
 class CartItem {
-  //Esta es la clase "carrito", pretende contener el método "incrementar"
-  // y un método random que rellene los carritos aleatoriamente. (intento frustrado de momento)
   cantidad = 1;
 
   constructor(item) {
@@ -108,9 +104,9 @@ class CartItem {
     this.cantidad++;
   }
 
-  fillCart(cantidad, catalogue) {
+  fillCart(cantidad, catalogo) {
     for (let i = 0; i < cantidad; i++) {
-      const itemIndex = Math.floor(Math.random() * catalogue.length);
+      const itemIndex = Math.floor(Math.random() * catalogo.length);
       this.addtoCarrito(catalogue[itemIndex]);
     }
   }
@@ -153,7 +149,7 @@ fillCart(item) {
 class Tienda {
   // En esta clase intento declarar el método de salida al pago "checkout" en el que
   // creo que ya me he hecho definitivamente un lío. Quizá deba replantearme el ejercicio
-  // entero porque siento que estoy dando vueltas sobre lo mismo. En el próximo intento 
+  // entero porque siento que estoy dando vueltas sobre lo mismo. En el próximo intento
   // lo haré sin implementar esta función, manualmente, a ver si lo consigo.
   nombre;
   constructor(nombre) {
@@ -172,10 +168,10 @@ class Tienda {
 
 const catalogue = Item.crearCatalogo(itemNames, itemPrices);
 console.log(catalogue);
-const tienda = new Tienda('La tienda de los calcetines carísimos.');
-const cliente1 = new Cliente('Juan');
-const cliente2 = new Cliente('Paula');
-const cliente3 = new Cliente('Nevenka');
+const tienda = new Tienda("La tienda de los calcetines carísimos.");
+const cliente1 = new Cliente("Juan");
+const cliente2 = new Cliente("Paula");
+const cliente3 = new Cliente("Nevenka");
 cliente1.fillCart(6, catalogue);
 cliente1.checkOut(cartItem);
 console.log(tienda);
@@ -183,13 +179,11 @@ console.log(cliente1);
 console.log(cliente2);
 console.log(cliente3);
 
-
 //#############################################################################################
 //################## TERCERA APROXIMACIÓN FRACASADA TODAVÍA ###################################
 //#############################################################################################
 
-
-const itemNames = ['Camisa', 'Pantalon', 'Calcetines']; // Array de artículos
+const itemNames = ["Camisa", "Pantalon", "Calcetines"]; // Array de artículos
 const itemPrices = [13, 27, 100]; // Array de precios
 
 class Item {
@@ -261,8 +255,11 @@ class Cliente {
         this.#carrito.incrementar(cantidad);
       }
     }
+
+
   }
 */
+/*
 class Tienda {
   // En esta clase intento declarar el método de salida al pago "checkout"
   nombre;
@@ -292,3 +289,4 @@ console.log(tienda);
 console.log(cliente1);
 console.log(cliente2);
 console.log(cliente3);
+*/
