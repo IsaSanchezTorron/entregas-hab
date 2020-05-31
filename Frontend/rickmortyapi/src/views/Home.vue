@@ -132,6 +132,7 @@ input {
     align-items: center;
     justify-content: center;
     max-height: 10rem;
+    width: auto;
   }
 
   #home {
@@ -139,6 +140,11 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: auto;
+  }
+  figure img {
+    width: 50%;
+    height: 50%;
   }
 }
 </style>

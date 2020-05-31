@@ -156,4 +156,17 @@ p {
 .gris {
   color: rgb(63, 59, 59);
 }
+@media (max-width: 700px) {
+  .contenedor > * {
+    width: auto;
+    height: auto;
+  }
+  .card {
+    width: auto;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 </style>

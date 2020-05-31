@@ -5,7 +5,7 @@
         <a id="home">Home</a>
       </router-link>👈👉
       <router-link id="about" to="/about">
-        <a id="about">About</a>
+        <a id="about2">About</a>
       </router-link>
     </div>
     <router-view />
@@ -40,9 +40,11 @@ a #home {
   color: rgb(46, 176, 199);
   text-decoration: none;
 }
-a {
+a #about2 {
   color: rgb(47, 180, 14);
+  text-decoration: none;
 }
+
 a:active {
   position: relative;
   top: 1px;
