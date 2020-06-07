@@ -113,6 +113,7 @@ export default {
 <style scoped>
 img {
   width: 400px;
+  border-radius: 50px;
 }
 
 button {
