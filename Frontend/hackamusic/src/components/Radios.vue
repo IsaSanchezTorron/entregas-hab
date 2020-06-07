@@ -57,4 +57,8 @@ export default {
 .galeriaradio div {
   padding: 150px 60px 40px;
 }
+
+img{
+width:200px;
+}
 </style>
