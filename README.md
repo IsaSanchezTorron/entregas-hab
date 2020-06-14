@@ -1,4 +1,4 @@
-999
+
 En este repositorio he ido guardando las entregas para el bootcamp.
 
 ORGANIZACIÓN DE LOS MÓDULOS:
@@ -88,7 +88,19 @@ ORGANIZACIÓN DE LOS MÓDULOS:
 
 ###################### FRONTEND ####################################
 
-1. VUE JS
+1. Introducción.
+2. El objeto VUE.
+3. Interpolación y reactividad.
+4. Directivas en Vuejs.
+5. Clases y estilos dinámicos.
+6. Componentes (básico)
+7. Métodos
+8. Estructura de un proyecto VUE.
+9. Componentes (medio).
+10. Props y eventos.
+11. Mixings.
+12. Vue Router.
+13. Estados
 
 
 (3 entregas + entrega del Frontend del Proyecto )
